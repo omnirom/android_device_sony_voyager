@@ -16,16 +16,20 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+
+# Inherit some common Omni stuff.
+$(call inherit-product, vendor/omni/config/gsm.mk)
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+TARGET_BOOTANIMATION_SIZE := 1080p
+AB_OTA_UPDATER := true
 
 # Inherit from pioneer device
 $(call inherit-product, device/sony/pioneer/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_pioneer
+PRODUCT_NAME := omni_pioneer
 PRODUCT_DEVICE := pioneer
 PRODUCT_BRAND := Sony
 PRODUCT_MODEL := Xperia XA2
