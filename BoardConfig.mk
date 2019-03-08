@@ -17,7 +17,7 @@
 # inherit from common nile-common
 -include device/sony/nile-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/sony/pioneer
+DEVICE_PATH := device/sony/voyager
 
 # inherit from the proprietary version
--include vendor/sony/pioneer/BoardConfigVendor.mk
+-include vendor/sony/voyager/BoardConfigVendor.mk

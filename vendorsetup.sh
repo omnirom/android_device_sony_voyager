@@ -20,6 +20,6 @@
 # In particular, you can add lunch options with the add_lunch_combo
 # function: add_lunch_combo generic-eng
 
-add_lunch_combo omni_pioneer-user
-add_lunch_combo omni_pioneer-userdebug
-add_lunch_combo omni_pioneer-eng
+add_lunch_combo omni_voyager-user
+add_lunch_combo omni_voyager-userdebug
+add_lunch_combo omni_voyager-eng
