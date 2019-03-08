@@ -15,7 +15,7 @@
 #
 
 # call the proprietary setup
-$(call inherit-product, vendor/sony/voyager/voyager-vendor.mk)
+$(call inherit-product, vendor/sony/voyager/device-vendor.mk)
 
 # Local overlays
 DEVICE_PACKAGE_OVERLAYS += \
