@@ -26,13 +26,15 @@ TARGET_BOOTANIMATION_SIZE := 1080p
 AB_OTA_UPDATER := true
 
 # Inherit from pioneer device
-$(call inherit-product, device/sony/pioneer/device.mk)
+$(call inherit-product, device/sony/voyager/device.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := omni_pioneer
-PRODUCT_DEVICE := pioneer
+PRODUCT_NAME := omni_voyager
+PRODUCT_DEVICE := voyager
 PRODUCT_BRAND := Sony
-PRODUCT_MODEL := Xperia XA2
+PRODUCT_MODEL := Xperia XA2 Plus
 PRODUCT_MANUFACTURER := Sony
+
+PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=voyager PRODUCT_NAME=XA2Plus
 
 PRODUCT_GMS_CLIENTID_BASE := android-sony
