@@ -20,12 +20,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 # Inherit some common Omni stuff.
 $(call inherit-product, vendor/omni/config/gsm.mk)
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 TARGET_BOOTANIMATION_SIZE := 1080p
 AB_OTA_UPDATER := true
 
-# Inherit from pioneer device
+DEVICE_PACKAGE_OVERLAYS += vendor/omni/overlay/CarrierConfig
+
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
+
+# Inherit from voyager device
 $(call inherit-product, device/sony/voyager/device.mk)
 
 # Device identifier. This must come after all inclusions
@@ -36,5 +44,6 @@ PRODUCT_MODEL := Xperia XA2 Plus
 PRODUCT_MANUFACTURER := Sony
 
 PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=voyager PRODUCT_NAME=XA2Plus
+TARGET_VENDOR := sony
 
 PRODUCT_GMS_CLIENTID_BASE := android-sony
