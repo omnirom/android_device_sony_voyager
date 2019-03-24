@@ -57,7 +57,7 @@ vendor/firmware/bu64747gwz.prog
 vendor/lib/libactuator_bu24228gwl.so
 vendor/lib/libactuator_bu64244gwz.so
 #vendor/lib/libactuator_bu64297.so
-#vendor/lib/libactuator_bu64747gwz.so
+vendor/lib/libactuator_bu64747gwz.so
 
 # Camera chromatix
 vendor/lib/libchromatix_imx219_chicony_common.so
@@ -358,5 +358,3 @@ vendor/bin/qns_22:vendor/bin/qns
 vendor/etc/wifi/bdwlan12.bin
 vendor/etc/wifi/bdwlan22.bin
 vendor/etc/wifi/bdwlan42.bin
-
-
